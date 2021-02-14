@@ -13,6 +13,10 @@ public class ComputerPlayer extends Player {
         this.chessModel = chessModel;
     }
 
+    public ComputerPlayer(Color color, ChessModel chessModel, String playerName) {
+        super(color, playerName);
+    }
+
     @Override
     public Move play() {
         return chessModel.getBestMove(Board.getInstance(), this);

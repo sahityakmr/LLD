@@ -11,10 +11,14 @@ public class HumanPlayer extends Player {
         super(color);
     }
 
+    public HumanPlayer(Color color, String playerName) {
+        super(color, playerName);
+    }
+
     @Override
     public Move play() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input fromRow, toRow, fromCol, toCol");
+        System.out.println("Hey "+ this.getPlayerName() +", Input fromRow, toRow, fromCol, toCol");
         return new Move(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), Instant.now());
     }
 }

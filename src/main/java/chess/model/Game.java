@@ -35,8 +35,8 @@ public class Game {
     public static void main(String[] args) {
         Board board = Board.getInstance();
 
-        Player varnika = new HumanPlayer(Color.WHITE);
-        Player sahitya = new HumanPlayer(Color.BLACK);
+        Player varnika = new HumanPlayer(Color.WHITE, "Varnika");
+        Player sahitya = new HumanPlayer(Color.BLACK, "Sahitya");
 
         Game game = new Game(board, varnika, sahitya);
         game.setEnableLogging(true);
@@ -102,8 +102,7 @@ public class Game {
         currentState = GameState.IN_PROGRESS;
 
         while (currentState == GameState.IN_PROGRESS) {
-            currentPlayer.play();
-            Move moveFromModel = chessModel.getBestMove(board, currentPlayer);
+            Move moveFromModel = currentPlayer.play();
             movePlayer(moveFromModel);
             currentPlayer = ChessUtils.togglePlayer(currentPlayer, player1, player2);
         }
