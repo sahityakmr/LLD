@@ -33,7 +33,7 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        Board board = new Board();
+        Board board = Board.getInstance();
 
         Player varnika = new HumanPlayer(Color.WHITE);
         Player sahitya = new HumanPlayer(Color.BLACK);

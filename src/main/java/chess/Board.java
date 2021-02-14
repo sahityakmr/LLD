@@ -2,15 +2,22 @@ package chess;
 
 import chess.piece.*;
 
-import static chess.Constants.*;
+import static chess.Constants.BOARD_SIZE;
 
 public class Board {
 
+    static Board currentBoard;
     private final Spot[][] spots;
 
-    public Board() {
+    private Board() {
         spots = new Spot[BOARD_SIZE][BOARD_SIZE];
         resetBoard();
+    }
+
+    public static Board getInstance() {
+        if (currentBoard == null)
+            currentBoard = new Board();
+        return currentBoard;
     }
 
     private void resetBoard() {
