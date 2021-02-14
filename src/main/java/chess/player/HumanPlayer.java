@@ -1,6 +1,6 @@
 package chess.player;
 
-import chess.Color;
+import chess.enums.Color;
 import chess.Move;
 
 import java.time.Instant;

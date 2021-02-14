@@ -1,10 +1,13 @@
 package chess.model;
 
 import chess.*;
+import chess.enums.Color;
+import chess.enums.GameState;
 import chess.piece.Piece;
-import chess.piece.PieceType;
+import chess.enums.PieceType;
 import chess.player.HumanPlayer;
 import chess.player.Player;
+import chess.utils.ChessUtils;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -12,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static chess.ChessUtils.getTestMoves;
+import static chess.utils.ChessUtils.getTestMoves;
 
 public class Game {
     private Board board;

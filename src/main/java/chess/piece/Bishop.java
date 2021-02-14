@@ -1,6 +1,7 @@
 package chess.piece;
 
-import chess.Color;
+import chess.enums.Color;
+import chess.enums.PieceType;
 
 public class Bishop extends Piece {
     public Bishop(Color color) {

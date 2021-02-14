@@ -1,12 +1,15 @@
-package chess;
+package chess.utils;
 
+import chess.ChessModel;
+import chess.Move;
+import chess.enums.Color;
 import chess.player.Player;
 
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-import static chess.Constants.*;
+import static chess.utils.Constants.*;
 
 public class ChessUtils {
 

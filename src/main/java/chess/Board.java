@@ -1,12 +1,17 @@
 package chess;
 
+import chess.enums.Color;
 import chess.piece.*;
+import chess.utils.ChessUtils;
 
-import static chess.Constants.BOARD_SIZE;
+import java.util.HashMap;
+
+import static chess.utils.Constants.BOARD_SIZE;
 
 public class Board {
 
     static Board currentBoard;
+    static HashMap<String, Board> boardHashMap;
     private final Spot[][] spots;
 
     private Board() {
@@ -18,6 +23,12 @@ public class Board {
         if (currentBoard == null)
             currentBoard = new Board();
         return currentBoard;
+    }
+
+    public static Board getInstance(String instanceId) {
+        if (!boardHashMap.containsKey(instanceId))
+            boardHashMap.put(instanceId, new Board());
+        return boardHashMap.get(instanceId);
     }
 
     private void resetBoard() {

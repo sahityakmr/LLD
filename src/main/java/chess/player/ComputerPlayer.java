@@ -2,7 +2,7 @@ package chess.player;
 
 import chess.Board;
 import chess.ChessModel;
-import chess.Color;
+import chess.enums.Color;
 import chess.Move;
 
 public class ComputerPlayer extends Player {
